@@ -6,31 +6,37 @@
 #define MAXLINE 1000
 #define ALLOCSIZE MAXLINES * MAXLINE
 #include <stdio.h>
-int readlines(char* linept[], int MAXLINES);
+int readlines(char* lines_ptr[], int MAXLINES);
 
-/* reads multiple lines(MAXLINE maximum) and store them in lines
+/*reads multiple lines(MAXLINES maximum) and store them in lines_ptr
 	
-return : number of read lines(that are stored in lines)
+return : number of read lines(that are stored in lines_ptr)
 
-[OUT] lines : array of string (char pointer) 
-								lines read will be stored in this parameter
-[IN] MAXLINES : maw of lines that can be stored in lines */
+[OUT] lines_ptr : array of strings (char pointers) 
+
+lines read will be stored in this parameter
+
+[IN] MAXLINES : max of lines that can be stored in lines_ptr*/
 
 
 int getline(char line[], int MAXLINE);
-/* reads one line from std input and store it in line
+
+/*reads one line from std input and store it in line
 	
 return : size of read line(0 = empty line)
 
-[OUT] line : read lines
-[IN] MAXLINE : maximum line size that can be read */
-	
+[OUT] line : read line
 
-void writelines(char *linesptr, int nlines);
-/* prints in linesptr to the stdio
+[IN] MAXLINE : maximum line size that can be read*/
 
-[IN] linesptr : an array of strings(pointers to chars)
-[IN] nlines : size of linesptr */
+
+void writelines(char *lines_ptr, int nlines);
+
+/*prints lines in lines_ptr to the stdio
+
+[IN] lines_ptr : an array of strings(pointers to chars)
+
+[IN] nlines : size of lines_ptr*/
 
 
 #endif
