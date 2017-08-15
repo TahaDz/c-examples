@@ -1,17 +1,18 @@
 # Sort lines read from std input -- \[IN-PROGRESS\]
 
 The program goes as follow :
-		1. reads \n-separated lines until EOF
+
+		1. reads `\n`-separated lines until EOF
 		2. sorts stored/read lines
 		3. prints stored lines & exit
 
 
 
 
-#API 
-
-	| int readlines(char* linept[], int MAXLINES);
-
+# API 
+        ```C
+	int readlines(char* linept[], int MAXLINES);
+        ```
 	reads multiple lines(MAXLINE maximum) and store them in lines
 	
 	return : number of read lines(that are stored in lines)
@@ -43,7 +44,7 @@ The program goes as follow :
 	[IN] nlines : size of linesptr
 
 
-#INTERNAL API 
+# INTERNAL API 
 	
 	| void strcpy( char *s, char *t);
 	copy a string t to s
