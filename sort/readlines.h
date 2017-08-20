@@ -2,10 +2,10 @@
 #define READLINES_H_
 
 
-#define MAXLINES 1000
-#define MAXLINE 1000
-#define ALLOCSIZE MAXLINES * MAXLINE
-#include <stdio.h>
+#include<stdio.h>
+#define LINES 1000
+#define LENGTH 1000
+#define ALLOCSIZE LINES * LENGTH
 int readlines(char* lines_ptr[], int MAXLINES);
 
 /*reads multiple lines(MAXLINES maximum) and store them in lines_ptr
@@ -19,7 +19,7 @@ lines read will be stored in this parameter
 [IN] MAXLINES : max of lines that can be stored in lines_ptr*/
 
 
-int getline(char line[], int MAXLINE);
+int get_line(char line[], int MAXLINE);
 
 /*reads one line from std input and store it in line
 	
@@ -30,7 +30,7 @@ return : size of read line(0 = empty line)
 [IN] MAXLINE : maximum line size that can be read*/
 
 
-void writelines(char *lines_ptr, int nlines);
+void write_lines(char *lines_ptr[], int nlines);
 
 /*prints lines in lines_ptr to the stdio
 
@@ -40,3 +40,21 @@ void writelines(char *lines_ptr, int nlines);
 
 
 #endif
+
+
+char* alloc(int n);
+
+/* allocates n elements in the buffer
+
+return : pointer to the first allocated elements 
+
+[IN] n : number of elements to allocate */
+
+void strcopy(char *s, char * t);
+
+/* copy a string to another one
+
+[IN] t : string to be copied
+[OUT] s : the copy
+
+*/

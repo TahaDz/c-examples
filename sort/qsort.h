@@ -11,3 +11,9 @@ void qsort(char *lines_ptr[], int left, int right );
 [IN] right : ending index for lines to be sorted in linesptr array */
 
 #endif
+void swap(char *v[], int i, int j);
+/* interchange two elements
+
+[IN-OUT] v : the array which contains the elements to interchange
+[IN] i : the first element index
+[IN] j : the second element index*/
