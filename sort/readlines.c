@@ -25,9 +25,9 @@ int readlines(char *lines_ptr[], int MAXLINES){
 	nlines = 0;
 
 	while ((len = get_line(line, LENGTH)) > 0){	
-	
-		while ((len	= get_line(line, LENGTH)) <= 1)//skipping empty lines
-			;
+		//skip empty lines
+		if (len == 1) // contains only \n
+			continue;
 		
 			if(nlines >= MAXLINES || (p = alloc(len)) == NULL) 		// overflow
 				return -1;
