@@ -46,7 +46,7 @@ sort an array of srings using quick sort algorithm
 - [IN] `right` : ending index for lines to be sorted in `lines_ptr` 
 
 ```C
-void writelines(char *lines_ptr, int nlines);
+void write_lines(char *lines_ptr, int nlines);
 ```
 prints lines in `lines_ptr` to the stdio
 
@@ -58,7 +58,7 @@ prints lines in `lines_ptr` to the stdio
 # INTERNAL API 
 	
 ```C
-void strcpy( char *s, char *t);
+void strcopy( char *s, char *t);
 ```
 copy a string t to s
 
@@ -93,5 +93,5 @@ store n elements in `allocbuf`
 
 + **How to compile code**
 ```bash
-$ gcc -g -Wall sort.c -o sortlines
+$ gcc -g -Wall sort.c readlines.c -o sortlines
 ```

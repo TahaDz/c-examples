@@ -5,13 +5,14 @@
 int get_line(char line[], int MAXLINE){
 	
 	int c, i;
-	
-	for (i = 0; i < MAXLINE - 1 && (c = getchar()) != EOF && c != '\n'; ++i) // read charcters from std input & store it in line array until new line or EOF
+	// read charcters from std input & store it in line array until new line or EOF	
+	for (i = 0; i < MAXLINE - 1 && (c = getchar()) != EOF && c != '\n'; ++i) 
 		line[i] = c;
 	if (c == '\n') {
-		line[i] = c;
-		++i;
+		line[i++] = c;
+		
 	}
+	//printf("--------------%d----------------\n",i);
 	line[i] = '\0';// end of string
 	return i;// line size
 }
@@ -22,14 +23,21 @@ int readlines(char *lines_ptr[], int MAXLINES){
 	int len, nlines;  
 	char *p, line[LENGTH];
 	nlines = 0;
-	while ((len = get_line(line, LENGTH)) > 0)//skipping empty lines
-		if (nlines >= MAXLINES || (p = alloc(len)) == NULL) // overflow
-			return -1;
-		else {
-			line[len-1] = '\0';
-			strcopy(p, line);
-			lines_ptr[nlines++] = p;
+
+	while ((len = get_line(line, LENGTH)) > 0){	
+	
+		while ((len	= get_line(line, LENGTH)) <= 1)//skipping empty lines
+			;
+		
+			if(nlines >= MAXLINES || (p = alloc(len)) == NULL) 		// overflow
+				return -1;
+			else {
+					line[len-1] = '\0';
+					strcopy(p, line);
+					lines_ptr[nlines++] = p;
+			}
 		}
+		
 	return nlines;
 }
 
@@ -61,7 +69,7 @@ char* alloc(int n){
 
 void strcopy(char *s, char * t){ // copying a string to another one
 
-	while(*s++ = *t++)
+	while((*s++ = *t++))
 		;
 
 }
