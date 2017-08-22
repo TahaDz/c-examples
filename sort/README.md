@@ -28,7 +28,7 @@ int getline(char line[], int MAXLINE);
 ```
 reads one line from std input and store it in `line`
 	
-- return : size of read line(0 = empty line)
+- return : size of read line( 1 = empty line & 0 = EOF)
 
 - [OUT] `line` : read line
 
