@@ -3,8 +3,8 @@
 
 
 
-/* qsort: sort v[left]...v[right] into increasing order */
-void qsort(char *v[], int left, int right){
+/* q_sort: sort v[left]...v[right] into increasing order */
+void q_sort(char *v[], int left, int right){
 
 int i, last;
 	if (left >= right) /* do nothing if array contains fewer than two elements */
@@ -16,8 +16,8 @@ int i, last;
 			swap(v, ++last, i);
 		}
 	swap(v, left, last);
-	qsort(v, left, last-1);
-	qsort(v, last+1, right);
+	q_sort(v, left, last-1);
+	q_sort(v, last+1, right);
 
 }
 

@@ -35,7 +35,7 @@ reads one line from std input and store it in `line`
 - [IN] `MAXLINE` : maximum line size that can be read
 
 ```C
-void qsort(char *lines_ptr[], int left, int right );
+void q_sort(char *lines_ptr[], int left, int right );
 ```
 sort an array of srings using quick sort algorithm
 	

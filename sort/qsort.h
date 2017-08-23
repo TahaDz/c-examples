@@ -3,7 +3,7 @@
 
 #include<stdio.h>
 #include<string.h>
-void qsort(char *lines_ptr[], int left, int right );
+void q_sort(char *lines_ptr[], int left, int right );
 /* sort an array of srings using quick sort algorithm
 	
 [IN-OUT] lines_ptr : array of strings to be sorted 
